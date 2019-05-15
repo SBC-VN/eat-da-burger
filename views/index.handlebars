@@ -1,25 +1,28 @@
-<h1>Eat Da Burger!</h1>
 
-<div id="undevoured-block">
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burger/burger-block1}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div id="burgers-block">
+  <div id="undevoured-block">
+    <h3>Ready</h3>
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burger/burger-block1}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+  </div>
+
+  <div id="devoured-block">
+    <h3>Devoured</h3>
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burger/burger-block2}}
+      {{/if}}
+    {{/each}}
+  </ul>
+  </div>
 </div>
-
-<div id="devoured-block">
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burger/burger-block2}}
-    {{/if}}
-  {{/each}}
-</ul>
-</div>
-
+<hr>
 <h2>Add a burger</h2>
 <form class="create-form">
 

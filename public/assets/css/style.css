@@ -1,3 +1,9 @@
+body {
+  background: tan;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 li {
   padding: 5px;
   margin: 5px;
@@ -19,11 +25,38 @@ li {
 }
 
 #undevoured-block {
-  display: inline-block;
+  /* display: inline-block; */
+  float: left;
+  height: 100%;
   width: 45%;
+  min-height: 100%;
+}
+
+#burgers-block {
+  position: relative;
+}
+
+#burgers-block:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #devoured-block {
-  display: inline-block;
+  /* display: inline-block; */
+  float: right;
   width: 45%;
+  top:0px;
+  min-height: 100%;
+}
+
+#burger-pic {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 15%;
+}
+
+#header-div {
+  text-align: center;
 }
